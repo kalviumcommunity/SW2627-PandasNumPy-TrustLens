@@ -253,4 +253,3 @@ The wireframes include:
 - Customer Reviews
 - Trust Insights
 
-These designs are aligned with the approved Product Requirements Document (PRD).
