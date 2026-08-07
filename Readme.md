@@ -1,59 +1,131 @@
-# TrustLens: Seller Performance & Customer Trust Analytics
+# TrustLens – Seller Behaviour & Customer Trust Analytics Dashboard
 
 ## Project Overview
 
-TrustLens is an end-to-end data analytics project that identifies seller behaviors that reduce customer trust in an e-commerce marketplace.
+TrustLens is a **Business Intelligence (BI) & Data Analytics Dashboard** that analyzes historical e-commerce marketplace data to identify seller behaviours that influence customer trust over time.
 
-The project combines seller performance metrics, return request analysis, and customer review sentiment into a single interactive dashboard to support data-driven decision-making.
+The platform consolidates orders, deliveries, reviews, sellers, customers, and products into a unified analytics system and computes a **Seller Trust Index (STI)** to identify high-performing and high-risk sellers.
 
----
-
-## Problem Statement
+### Problem Statement
 
 An e-commerce marketplace tracks seller performance, return requests, and customer review sentiment, but no operational dashboard identifies which seller behaviours consistently reduce customer trust over time.
 
----
-
-## Objectives
-
-- Clean and preprocess marketplace data
-- Analyze seller performance
-- Study return request patterns
-- Analyze customer review sentiment
-- Build an interactive Streamlit dashboard
-- Generate business insights
+TrustLens addresses this gap through interactive analytics dashboards and standardized trust metrics.
 
 ---
 
-## Tech Stack
+## Key Features
 
-- Python
-- Pandas
-- NumPy
-- SQLite
-- Streamlit
-- Plotly
-- GitHub Actions
+* Marketplace KPI Dashboard
+* Seller Performance Analytics
+* Delivery Performance Analytics
+* Customer Review Analytics
+* Seller Trust Index (STI)
+* Trust Band Classification
+* Interactive Filters
+* CSV Export
+* SQLite Analytics Database
 
 ---
 
-## Repository Structure
+## Technology Stack
 
-```
+| Layer           | Technology    |
+| --------------- | ------------- |
+| Programming     | Python        |
+| Data Processing | Pandas, NumPy |
+| Database        | SQLite        |
+| Querying        | SQL           |
+| Dashboard       | Streamlit     |
+| Visualization   | Plotly        |
+| Version Control | Git & GitHub  |
+
+---
+
+## Project Structure
+
+```text
 TrustLens/
 │
 ├── data/
-├── docs/
-├── notebooks/
-├── sql/
+│   ├── raw/
+│   ├── processed/
+│   └── database/
+│
 ├── src/
-├── streamlit/
-└── README.md
+│   ├── ingestion/
+│   ├── preprocessing/
+│   ├── feature_engineering/
+│   ├── analytics/
+│   └── database/
+│
+├── dashboard/
+│   ├── Home.py
+│   └── pages/
+│
+├── docs/
+│   └── PRD.md
+│
+├── tests/
+├── requirements.txt
+├── README.md
+└── run_pipeline.py
 ```
 
 ---
 
-## Team Members
+## Dashboard Modules
 
-- Sathvika Dharani Bhartu
-- Yashuwant John M Vijay
+### Dashboard Overview
+
+* Total Orders
+* Total Sellers
+* Average Rating
+* Average Delivery Time
+* On-Time Delivery Rate
+* Seller Trust Index
+
+### Seller Performance
+
+* Seller Ranking
+* Seller Comparison
+* Completion Rate
+* On-Time Delivery Rate
+
+### Delivery Performance
+
+* Delivery Trends
+* Delay Analysis
+* Category Delivery Analysis
+
+### Customer Reviews
+
+* Rating Distribution
+* Review Trends
+* Seller Rating Analysis
+
+### Trust Insights
+
+* Trust Score Distribution
+* Trust Bands
+* High-Risk Sellers
+
+---
+
+## Seller Trust Index (STI)
+
+| Metric           | Weight |
+| ---------------- | ------ |
+| Average Rating   | 40%    |
+| On-Time Delivery | 30%    |
+| Completion Rate  | 20%    |
+| Review Volume    | 10%    |
+
+**Formula**
+
+```text
+STI = (Rating × 0.40)
+    + (On-Time Delivery × 0.30)
+    + (Completion Rate × 0.20)
+    + (Review Volume × 0.10)
+```
