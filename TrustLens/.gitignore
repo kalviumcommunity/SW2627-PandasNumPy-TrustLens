@@ -39,3 +39,14 @@ data/processed/*
 # Temporary files
 *.tmp
 *.log
+
+# Raw Olist datasets
+data/raw/*.csv
+
+# Processed datasets
+data/processed/*.csv
+
+# Local database files
+data/database/*.db
+data/database/*.sqlite
+data/database/*.sqlite3
