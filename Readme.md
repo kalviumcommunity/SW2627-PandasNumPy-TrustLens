@@ -30,15 +30,15 @@ TrustLens addresses this gap through interactive analytics dashboards and standa
 
 ## Technology Stack
 
-| Layer           | Technology    |
+| Layer           | Technology    |
 | --------------- | ------------- |
-| Programming     | Python        |
+| Programming     | Python        |
 | Data Processing | Pandas, NumPy |
-| Database        | SQLite        |
-| Querying        | SQL           |
-| Dashboard       | Streamlit     |
-| Visualization   | Plotly        |
-| Version Control | Git & GitHub  |
+| Database        | SQLite        |
+| Querying        | SQL           |
+| Dashboard       | Streamlit     |
+| Visualization   | Plotly        |
+| Version Control | Git & GitHub  |
 
 ---
 
@@ -48,30 +48,29 @@ TrustLens addresses this gap through interactive analytics dashboards and standa
 TrustLens/
 │
 ├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── database/
+│   ├── raw/
+│   ├── processed/
+│   └── database/
 │
 ├── src/
-│   ├── ingestion/
-│   ├── preprocessing/
-│   ├── feature_engineering/
-│   ├── analytics/
-│   └── database/
+│   ├── ingestion/
+│   ├── preprocessing/
+│   ├── feature_engineering/
+│   ├── analytics/
+│   └── database/
 │
 ├── dashboard/
-│   ├── Home.py
-│   └── pages/
+│   ├── Home.py
+│   └── pages/
 │
 ├── docs/
-│   └── PRD.md
+│   └── PRD.md
 │
 ├── tests/
 ├── requirements.txt
 ├── README.md
 └── run_pipeline.py
 ```
-
 ---
 
 ## Dashboard Modules
@@ -114,21 +113,100 @@ TrustLens/
 
 ## Seller Trust Index (STI)
 
-| Metric           | Weight |
+| Metric           | Weight |
 | ---------------- | ------ |
-| Average Rating   | 40%    |
-| On-Time Delivery | 30%    |
-| Completion Rate  | 20%    |
-| Review Volume    | 10%    |
+| Average Rating   | 40%    |
+| On-Time Delivery | 30%    |
+| Completion Rate  | 20%    |
+| Review Volume    | 10%    |
 
 **Formula**
 
 ```text
 STI = (Rating × 0.40)
-    + (On-Time Delivery × 0.30)
-    + (Completion Rate × 0.20)
-    + (Review Volume × 0.10)
+    + (On-Time Delivery × 0.30)
+    + (Completion Rate × 0.20)
+    + (Review Volume × 0.10)
 ```
+---
+
+## Dataset Setup
+
+TrustLens uses the Brazilian E-Commerce Public Dataset by Olist.
+
+The complete raw dataset is not stored in this GitHub repository because the CSV files are relatively large.
+
+## Data Processing Pipeline
+
+TrustLens processes the Olist dataset through a structured data pipeline before analytics and dashboard development.
+
+### Processing Stages
+
+1. **Raw Data Ingestion**
+   - Loads the Olist CSV datasets from `data/raw/`.
+   - Validates the presence of required datasets and columns.
+
+2. **Data Cleaning & Preprocessing**
+   - Handles missing values according to dataset-specific rules.
+   - Removes duplicate records where applicable.
+   - Standardizes column names and data types.
+   - Converts timestamp fields into consistent datetime formats.
+   - Validates key fields required for joining datasets.
+
+3. **Data Quality Validation**
+   - Checks required columns and expected data types.
+   - Identifies missing and duplicate records.
+   - Validates primary and foreign key relationships.
+   - Checks date and numeric field consistency.
+   - Records data-quality issues for review.
+
+4. **Processed Data**
+   - Cleaned datasets are written to `data/processed/`.
+   - Processed data will be used for feature engineering, SQLite database creation, and analytics.
+
+### Data Flow
+
+```text
+Olist Raw CSV Files
+        ↓
+Data Ingestion
+        ↓
+Schema Validation
+        ↓
+Data Cleaning
+        ↓
+Data Quality Validation
+        ↓
+Processed Datasets
+        ↓
+Feature Engineering
+        ↓
+SQLite Database
+        ↓
+SQL Analytics
+        ↓
+Streamlit Dashboard
+
+### Dataset Files Required
+
+Place the following CSV files inside:
+
+data/raw/
+
+- olist_customers_dataset.csv
+- olist_geolocation_dataset.csv
+- olist_order_items_dataset.csv
+- olist_order_payments_dataset.csv
+- olist_order_reviews_dataset.csv
+- olist_orders_dataset.csv
+- olist_products_dataset.csv
+- olist_sellers_dataset.csv
+- product_category_name_translation.csv
+
+The dataset can be obtained from the Brazilian E-Commerce Public Dataset by Olist.
+
+After downloading the files, place them in the `data/raw/` directory before running the data pipeline.
+
 ---
 
 ## Setup Instructions
@@ -193,17 +271,21 @@ Main datasets:
 
 ## Development Roadmap
 
-* Product Requirements Document (PRD)
-* Low-Fidelity Wireframes
-* Project Setup
-* Data Cleaning Pipeline
-* Feature Engineering
-* SQLite Database
-* SQL Analytics Layer
-* Streamlit Dashboard
-* UI Polishing
-* Testing
-* Final Presentation
+## Development Roadmap
+
+* [✅] Product Requirements Document (PRD)
+* [✅] Low-Fidelity Wireframes
+* [✅] Project Setup
+* [✅] Dataset Acquisition & Initial Schema Validation
+* [✅] Data Cleaning & Preprocessing
+* [✅] Data Quality Validation
+* [ ] Feature Engineering & Seller Trust Index Calculation
+* [ ] SQLite Database
+* [ ] SQL Analytics Layer
+* [ ] Streamlit Dashboard
+* [ ] UI Polishing
+* [ ] Testing
+* [ ] Final Presentation
 
 ---
 
@@ -237,7 +319,7 @@ This project is developed for academic and educational purposes.
 
 ## Current Status
 
-**PRD Completed · Low-Fidelity Design Completed · Development In Progress**
+**PRD Approved · Low-Fidelity Design Approved · Project Initialized · Dataset Acquired · Ingestion & Schema Validation Completed · Data Cleaning & Quality Validation **
 
 ## Low-Fidelity Design
 
@@ -252,4 +334,5 @@ The wireframes include:
 - Delivery Performance
 - Customer Reviews
 - Trust Insights
+
 
