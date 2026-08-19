@@ -23,6 +23,7 @@ def create_seller_features(
         "order_id",
         "order_status",
         "on_time_delivery",
+        "order_completed",
     ]
 
     order_data = order_data[
