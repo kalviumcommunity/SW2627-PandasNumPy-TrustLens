@@ -269,7 +269,7 @@ Main datasets:
 
 ---
 
-## Development Roadmap
+
 
 ## Development Roadmap
 
@@ -279,9 +279,9 @@ Main datasets:
 * [✅] Dataset Acquisition & Initial Schema Validation
 * [✅] Data Cleaning & Preprocessing
 * [✅] Data Quality Validation
-* [ ] Feature Engineering & Seller Trust Index Calculation
-* [ ] SQLite Database
-* [ ] SQL Analytics Layer
+* [✅] Feature Engineering & Seller Trust Index Calculation
+* [✅] SQLite Database
+* [✅] SQL Analytics Layer
 * [ ] Streamlit Dashboard
 * [ ] UI Polishing
 * [ ] Testing
