@@ -282,7 +282,7 @@ Main datasets:
 * [✅] Feature Engineering & Seller Trust Index Calculation
 * [✅] SQLite Database
 * [✅] SQL Analytics Layer
-* [ ] Streamlit Dashboard
+* [✅] Streamlit Dashboard
 * [ ] UI Polishing
 * [ ] Testing
 * [ ] Final Presentation
