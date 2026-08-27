@@ -283,7 +283,8 @@ Main datasets:
 * [✅] SQLite Database
 * [✅] SQL Analytics Layer
 * [✅] Streamlit Dashboard
-* [ ] UI Polishing
+* [✅] Re checking the streamlit Dashboard
+* [ ] UI Polishing(Working on it)
 * [ ] Testing
 * [ ] Final Presentation
 
